@@ -1,5 +1,0 @@
-{
-"name": "zegar","require-dev": {
-    "heroku/heroku-buildpack-php" : "dev-master"
-}
-}
