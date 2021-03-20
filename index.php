@@ -2,7 +2,7 @@
 $connection_string = "postgres://zwxcfkbnnofssn:3988c3bfbee7aa180f0830590f64be229d50bb79063fc9fce8bc3b726855fc9e@ec2-54-247-158-179.eu-west-1.compute.amazonaws.com:5432/dbg30a66nr6ce9";
 $dbconn = pg_connect($connection_string);
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
-      $sql = "insert into public.user(name,email,password,mobno)values('".$_POST['name']."','".$_POST['email']."','".md5($_POST['pwd'])."')";
+      $sql = "insert into public.user(name,email,password)values('".$_POST['name']."','".$_POST['email']."','".md5($_POST['pwd'])."')";
     $ret = pg_query($dbconn, $sql);
     if($ret){
         echo "Data saved Successfully";
