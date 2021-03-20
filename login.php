@@ -7,7 +7,7 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     $data = pg_query($dbconn,$sql); 
     $login_check = pg_num_rows($data);
     if($login_check > 0){ 
-      header("zegar1.2.php");
+      header("Location: zegar1.2.php");
       exit();   
     }else{
         echo "Invalid Details";
