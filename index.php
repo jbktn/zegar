@@ -1,3 +1,4 @@
+<?php
 $connection_string = "postgres://zwxcfkbnnofssn:3988c3bfbee7aa180f0830590f64be229d50bb79063fc9fce8bc3b726855fc9e@ec2-54-247-158-179.eu-west-1.compute.amazonaws.com:5432/dbg30a66nr6ce9";
 $dbconn = pg_connect($connection_string);
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
@@ -26,11 +27,11 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
   <form method="post">
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <input type="email" class="form-control" id="email" placeholder="Wpisz email" name="email">
     </div>
     <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <label for="pwd">Hasło:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Wpisz hasło" name="pwd">
     </div>
     <input type="submit" name="submit" class="btn btn-primary" value="Submit">
   </form>
