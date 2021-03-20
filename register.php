@@ -1,22 +1,18 @@
 $connection_string = "postgres://zwxcfkbnnofssn:3988c3bfbee7aa180f0830590f64be229d50bb79063fc9fce8bc3b726855fc9e@ec2-54-247-158-179.eu-west-1.compute.amazonaws.com:5432/dbg30a66nr6ce9";
 $dbconn = pg_connect($connection_string);
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
-    
       $sql = "insert into public.user(name,email,password,mobno)values('".$_POST['name']."','".$_POST['email']."','".md5($_POST['pwd'])."','".$_POST['mobno']."')";
     $ret = pg_query($dbconn, $sql);
     if($ret){
-        
-            echo "Data saved Successfully";
+        echo "Data saved Successfully";
     }else{
-        
-            echo "Soething Went Wrong";
+        echo "Soething Went Wrong";
     }
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <title>PHP PostgreSQL Registration & Login Example </title>
   <meta name="keywords" content="PHP,PostgreSQL,Insert,Login">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,29 +20,24 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
 </head>
 <body>
 <div class="container">
-  <h2>Register Here </h2>
+  <h2>Rejestracja </h2>
   <form method="post">
-  
-    <div class="form-group">
-      <label for="name">Name:</label>
+  <div class="form-group">
+      <label for="name">Imię:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" requuired>
     </div>
-    
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
-    
     <div class="form-group">
-      <label for="pwd">Mobile No:</label>
+      <label for="pwd">Nr telefonu:</label>
       <input type="number" class="form-control" maxlength="10" id="mobileno" placeholder="Enter Mobile Number" name="mobno">
     </div>
-    
     <div class="form-group">
-      <label for="pwd">Password:</label>
+      <label for="pwd">Hasło:</label>
       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
     </div>
-     
     <input type="submit" name="submit" class="btn btn-primary" value="Submit">
   </form>
 </div>
