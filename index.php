@@ -163,7 +163,7 @@
                 </li>
                 <li class="bg-white font-semibold px-4 py-4 text-gray-900 cursor-pointer text-2xl flex items-center justify-between" data-hour="12">
                     <span data-hour="12">UTC+12 </span>
-                    <span data-hour="12">Fidżi </span>
+                    <span data-hour="12">Fiji </span>
                 </li>
                 <li class="bg-white font-semibold px-4 py-4 text-gray-900 cursor-pointer text-2xl flex items-center justify-between" data-hour="13">
                     <span data-hour="13">UTC+13 </span>
