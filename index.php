@@ -5,7 +5,8 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
       $sql = "insert into public.user(name,email,password)values('".$_POST['name']."','".$_POST['email']."','".md5($_POST['pwd'])."')";
     $ret = pg_query($dbconn, $sql);
     if($ret){
-        echo "Data saved Successfully";
+      header("login.php");
+      exit();
     }else{
         echo "Soething Went Wrong";
     }
